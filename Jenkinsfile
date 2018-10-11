@@ -26,13 +26,13 @@ pipeline {
             parallel {
                 stage('Deploy to Staging') {
                     steps {
-                        bat "cp **/target/*.war C:/sw/apache-tomcat-9.0.12-staging/webapps/"
+                        bat "copy **/target/*.war C:/sw/apache-tomcat-9.0.12-staging/webapps/"
                     }
                 }
 
                 stage("Deploy to Production") {
                     steps {
-                        bat "cp **/target/*.war C:/sw/apache-tomcat-9.0.12-staging/webapps/"
+                        bat "copy **/target/*.war C:/sw/apache-tomcat-9.0.12-staging/webapps/"
                     }
                 }
             }
