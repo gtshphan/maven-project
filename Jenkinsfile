@@ -26,7 +26,7 @@ pipeline {
             parallel {
                 stage('Deploy to Staging') {
                     steps {
-                        bat "copy C:/Program Files (x86)/Jenkins/workspace/FullyAutomateWithJenkinsfile/webapp/target/*.war C:/sw/apache-tomcat-9.0.12-staging/webapps/"
+                        bat "C:\Program Files (x86)\Jenkins\workspace\FullyAutomateWithJenkinsfile\webapp\target\webapp.war  C:\sw\apache-tomcat-9.0.12-staging\webapps"
                     }
                 }
 
