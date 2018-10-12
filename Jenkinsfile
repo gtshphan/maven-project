@@ -26,7 +26,7 @@ pipeline {
             parallel {
                 stage('Deploy to Staging') {
                     steps {
-                        bat "scp -i C:\\Users\\Hung\\Desktop\\gts\\keys\\udemy-class.pem C:\\Users\\Hung\\Desktop\\gts\\keys\\webapp.war ec2-user@${params.tomcat_staging}:/var/lib/tomcat/webapps"
+                        bat "C:\\Windows\\System32\\OpenSSH\\scp -i C:\\Users\\Hung\\Desktop\\gts\\keys\\udemy-class.pem C:\\Users\\Hung\\Desktop\\gts\\keys\\webapp.war ec2-user@${params.tomcat_staging}:/var/lib/tomcat/webapps"
                     }
                 }
 
