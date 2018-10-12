@@ -26,7 +26,10 @@ pipeline {
             parallel {
                 stage('Deploy to Staging') {
                     steps {
-                        bat "C:\\Windows\\System32\\OpenSSH\\scp.exe -i C:\\Users\\Hung\\Desktop\\gts\\keys\\udemy-class.pem C:\\Users\\Hung\\Desktop\\gts\\keys\\webapp.war ec2-user@${params.tomcat_staging}:/var/lib/tomcat/webapps"
+                        bat "dir C:\\Windows\\System32\\OpenSSH\\scp.exe"
+                        bat "dir C:\\Users\\Hung\\Desktop\\gts\\keys\\udemy-class.pem"
+                        bat "dir C:\\Users\\Hung\\Desktop\\gts\\keys\\webapp.war"
+ //                       bat "C:\\Windows\\System32\\OpenSSH\\scp.exe -i C:\\Users\\Hung\\Desktop\\gts\\keys\\udemy-class.pem C:\\Users\\Hung\\Desktop\\gts\\keys\\webapp.war ec2-user@${params.tomcat_staging}:/var/lib/tomcat/webapps"
                     }
                 }
 
