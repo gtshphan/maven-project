@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'tomcat_staging', defaultValue: 'localhost:8090', description: 'Staging Server')
+        string(name: 'tomcat_staging', defaultValue: '18.234.94.9', description: 'Staging Server')
         string(name: 'tomcat_prod', defaultValue: 'localhost:8091', description: 'Production Server')
     }
     
@@ -26,15 +26,15 @@ pipeline {
             parallel {
                 stage('Deploy to Staging') {
                     steps {
-                        bat "copy C:\\Program Files (x86)\\Jenkins\\workspace\\FullyAutomateWithJenkinsfile\\webapp\\target\\webapp.war  C:\\sw\\apache-tomcat-9.0.12-staging\\webapps\\"
+                        bat "dir /Users/Hung/Desktop"
                     }
                 }
 
-                stage("Deploy to Production") {
-                    steps {
-                        bat "copy C:\\Program Files (x86)\\Jenkins\\workspace\\FullyAutomateWithJenkinsfile\\webapp\\target\\webapp.war  C:\\sw\\apache-tomcat-9.0.12-staging\\webapps\\"
-                    }
-                }
+//                stage("Deploy to Production") {
+//                    steps {
+//                        bat "copy C:\\Program Files (x86)\\Jenkins\\workspace\\FullyAutomateWithJenkinsfile\\webapp\\target\\webapp.war  C:\\sw\\apache-tomcat-9.0.12-staging\\webapps\\"
+//                    }
+//                }
             }
         }
     }
