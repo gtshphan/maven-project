@@ -26,7 +26,7 @@ pipeline {
             parallel {
                 stage('Deploy to Staging') {
                     steps {
-                        bat "dir /Users/Hung/Desktop"
+                        bat "C:\Users\Hung\Desktop\gts\keys"
                     }
                 }
 
